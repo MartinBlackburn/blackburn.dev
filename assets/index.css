@@ -95,3 +95,21 @@ img {
     filter: grayscale(1);
     margin-bottom: 16px;
 }
+
+#jonnyPortfolio img {
+    animation: bubble 20s ease-in-out alternate infinite;
+}
+
+@keyframes bubble {
+    0% {
+        border-radius:  63% 44% 35% 76% / 67% 38% 79% 40%
+      } 
+      
+      50% {
+        border-radius:  30% 61% 89% 28% / 79% 32% 67% 25%;
+      }
+    
+      100% {
+        border-radius:  45% 91% 63% 53% / 49% 89% 40% 76%;
+      } 
+  }
