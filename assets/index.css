@@ -65,6 +65,12 @@ a:hover {
     opacity: 0.8;
 }
 
+img {
+    border-radius: 1000px;
+    filter: grayscale(1);
+    margin-bottom: 16px;
+}
+
 .page {
     display: flex;
     flex-direction: column;
@@ -90,26 +96,51 @@ a:hover {
     text-align: center;
 }
 
-img {
-    border-radius: 1000px;
-    filter: grayscale(1);
-    margin-bottom: 16px;
+.portfolio__byline {
+    display: flex;
+
+    margin-bottom: -40px;
+
+    font-family: cursive;
 }
 
-#jonnyPortfolio img {
+@media (min-width: 480px) {
+    .page {
+        margin-bottom: -60px;
+    }
+}
+
+.portfolio__arrow {
+    max-width: 50px;
+    transform: rotate(180deg);
+}
+
+.portfolio--jonny {
+    transform: scale(0.8);
+}
+
+.portfolio--jonny .portfolio__byline {
+    justify-content: flex-end;
+}
+
+.portfolio--jonny .portfolio__arrow {
+    transform: scaleY(-1);
+}
+
+.portfolio--jonny img {
     animation: bubble 20s ease-in-out alternate infinite;
 }
 
 @keyframes bubble {
     0% {
-        border-radius:  63% 44% 35% 76% / 67% 38% 79% 40%
-      } 
-      
-      50% {
-        border-radius:  30% 61% 89% 28% / 79% 32% 67% 25%;
-      }
-    
-      100% {
-        border-radius:  45% 91% 63% 53% / 49% 89% 40% 76%;
-      } 
-  }
+        border-radius: 63% 44% 35% 76% / 67% 38% 79% 40%;
+    }
+
+    50% {
+        border-radius: 30% 61% 89% 28% / 79% 32% 67% 25%;
+    }
+
+    100% {
+        border-radius: 45% 91% 63% 53% / 49% 89% 40% 76%;
+    }
+}
